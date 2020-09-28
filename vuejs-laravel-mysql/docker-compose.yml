@@ -1,0 +1,17 @@
+# Use root/example as user/password credentials
+version: '3'
+
+services:
+  app:
+    container_name: main-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_DATABASE: jt3nf8l8gygxama1
+      DB_USERNAME: z3wao3svhlkazakx
+      DB_PASSWORD: ipevn28j9bk4fo6f
+      DB_PORT: 3306
+      DB_HOST: vlvlnl1grfzh34vj.chr7pe7iynqr.eu-west-1.rds.amazonaws.com
+      APP_KEY: base64:oWXfgthuF5BFwkux+9O45dN62jFdjEZSCxqYL+U88hM=
+      JWT_SECRET: ZzRTtvo2Kg00fisJa2TS44Bh6U0DnaxJNiRb1tx1rvWvEUFefGyVC7IXRxvGXAQV

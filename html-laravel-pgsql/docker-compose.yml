@@ -1,0 +1,19 @@
+# Use root/example as user/password credentials
+version: '3'
+
+services:
+  app:
+    container_name: main-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_CONNECTION: pgsql
+      DB_DATABASE: example
+      DB_USERNAME: example
+      DB_PASSWORD: example
+      DB_HOST: db
+      APP_KEY: base64:oWXfgthuF5BFwkux+9O45dN62jFdjEZSCxqYL+U88hM=
+      JWT_SECRET: ZzRTtvo2Kg00fisJa2TS44Bh6U0DnaxJNiRb1tx1rvWvEUFefGyVC7IXRxvGXAQV
+    ports: 
+      - 80:80
